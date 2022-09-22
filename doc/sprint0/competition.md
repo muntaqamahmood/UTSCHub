@@ -1,5 +1,6 @@
 ## Existing products that solve the same problem as us:
-    Ecommerce applications like Ebay or Amazon, as well as social media apps
+   Ecommerce applications like Ebay or Amazon, as well as social media apps
+    
     https://www.amazon.ca/
 
 # How is your product different?
