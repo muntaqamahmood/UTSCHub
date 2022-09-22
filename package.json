@@ -1,7 +1,7 @@
 {
-  "name": "finalprojectf22-tech-army",
+  "name": "UTSC Hub",
   "version": "1.0.0",
-  "description": "UTSC Hub web application",
+  "description": "A web application that is a mix ecommerce and social media for UTSC students",
   "main": "index.js",
   "directories": {
     "doc": "doc"
