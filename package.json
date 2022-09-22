@@ -1,0 +1,36 @@
+{
+  "name": "finalprojectf22-tech-army",
+  "version": "1.0.0",
+  "description": "UTSC Hub web application",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UTSCCSCC01/finalprojectf22-tech-army.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UTSCCSCC01/finalprojectf22-tech-army/issues"
+  },
+  "homepage": "https://github.com/UTSCCSCC01/finalprojectf22-tech-army#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.8",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "nodemon": "^2.0.20"
+  }
+}
