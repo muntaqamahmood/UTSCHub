@@ -8,6 +8,9 @@ UTSC_Hub is an application that targets all UTSC students and faculty members to
  ### Requirements
 
  - NodeJS (16.17.0 LTS)
+ 
+ Optional
+ - Postman (for manual testing of backend API)
 
  ### Setup
 
