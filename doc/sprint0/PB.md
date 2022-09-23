@@ -17,3 +17,6 @@
 | As a UTSC student who has created a profile page and selling items on the market, I would like to view the complete list of items that I am currently selling on the profile page. | Medium | Nandhakishore | |
 | As a UTSC student who has created a profile page and purchased an item on the market, I would like to view my order on the profile page so I will know the relevant information regarding pickup. | Medium | Nandhakishore | |
 | As a UTSC student who has created a profile page, I would like to be able to edit profile information whenever I feel necessary. | Low | Nandhakishore | |
+| As a seller, I want to be able to take down my item listings, so I can let others know that I am no longer selling them. | Medium | Henry | |
+| As a potential customer, I want to leave comments and reviews on items, so I can let other people know my thoughts on the item. | Low | Henry | |
+| As a customer, I want to be able to bookmark items that I might want to buy later, so I can check on them some time in the future | Low | Henry | |
