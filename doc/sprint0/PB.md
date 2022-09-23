@@ -10,17 +10,16 @@
 | As a UTSC student, I want to be able to join events in interested in with other like minded UTSC students, so that I can socialize and have pursue my hobbies. | Medium | Andrew | |
 | As a UTSC student, I want to be able to quickly find and message other UTSC students so that I can socialize and communicate with them. | Low | Andrew | |
 | As a UTSC student, I want to be able to post the key events so that other UTSC students can see and join me on an event. | Low | Shun | |
-| As a UTSC student, I can subscribe to specific people, groups, or clubs, and I can get notified once there are any updates by either clicking on the notification bar or on the profile page. | Medium | Shun | |
-| As a registered UTSC student, I would like to have a profile section where fellow users can view my basic information. | Medium | Nandhakishore | |
-| As a UTSC student who has created a profile page and selling items on the market, I would like to view the complete list of items that I am currently selling on the profile page. | Medium | Nandhakishore | |
-| As a UTSC student who has created a profile page and purchased an item on the market, I would like to view my order on the profile page so I will know the relevant information regarding pickup. | Medium | Nandhakishore | |
-| As a UTSC student who has created a profile page, I would like to be able to edit profile information whenever I feel necessary. | Low | Nandhakishore | |
-| As a student seller, I want to be able to take down my item listings, so I can let others know that I am no longer selling them. | Medium | Henry | |
-| As a potential student customer, I want to leave comments and reviews on items, so I can let other people know my thoughts on the item. | Low | Henry | |
-| As a student customer, I want to be able to bookmark items that I might want to buy later, so I can check on them some time in the future | Low | Henry | |
+| As a registered UTSC student, I would like to have a profile section so that fellow users can view my basic information. | Medium | Nandhakishore | |
+| As a UTSC student who has created a profile page and selling items on the market, I would like to view the complete list of items so that I know what I am currently selling on the profile page. | Medium | Nandhakishore | |
+| As a UTSC student who has created a profile page and purchased an item on the market, I would like to view my order on the profile page so that I will know the relevant information regarding pickup. | Medium | Nandhakishore | |
+| As a UTSC student who has created a profile page, I would like to be able to edit profile information so that I can adjust my information whenever I feel necessary. | Low | Nandhakishore | |
+| As a student seller, I want to be able to take down my item listings, so that I can let others know  I am no longer selling them. | Medium | Henry | |
+| As a potential student customer, I want to leave comments and reviews on items, so that I can let other people know my thoughts on the item. | Low | Henry | |
+| As a student customer, I want to be able to bookmark items that I might want to buy later, so that I can check on them some time in the future | Low | Henry | |
 | As a UTSC student seller, I want to edit a selling poster any time so that I can add more information about my clothes or change the price of my clothes after making the post. | Low | John | |
-| As a UTSC student seller, I want to be able to to post clothes designed by myself for my fashion brand so that other UTSC students can see the price and description of my clothes and purchase them. | Medium | John | |
+| As a UTSC student seller(Kayne), I want to be able to to post clothes designed by myself for my fashion brand so that other UTSC students can see the price and description of my clothes and purchase them. | Medium | John | |
 | As a user, I want to keep my account securely and privately so that everyone else can’t have access to my account and I don’t have to worry about personal information leakage. | High | Shence | |
-| As a buyer, I want to be able to view only products which satisfied my needs so that I can save my time. | Low | Shence | |
+| As a buyer, I want to be able to view only products which satisfied my needs so that I can save my time from going through every post. | Low | Shence | |
 | As Kanye, I want to be able to add pictures of my well-designed clothes into the product description so that it can attract more customers and also users could gain a better experience while using the website. | Medium | Shence | |
 | As a UTSC student, I want to be able to delete my user account so that I can erase all my information from the UTSC Hub website. | Medium | Muntaqa | |
