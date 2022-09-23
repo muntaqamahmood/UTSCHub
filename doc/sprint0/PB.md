@@ -23,4 +23,5 @@
 | As a buyer, I want to be able to view only products which satisfied my needs so that I can save my time from going through every post. | Low | Shence | |
 | As Kanye, I want to be able to add pictures of my well-designed clothes into the product description so that it can attract more customers and also users could gain a better experience while using the website. | Medium | Shence | |
 | As a UTSC student, I want to be able to delete my user account so that I can erase all my information from the UTSC Hub website. | Medium | Muntaqa | |
-| As a UTSC club owner, I want to be able to delete the events that already occurred or got canceled with a reason. | Low | Shun |
+| As a UTSC club owner, I want to be able to delete the events that already occurred or got canceled with a reason. | Low | Shun | |
+| As a UTSC student, I would like to get notified when there is a direct message to me so I can rely to them as soon as possible. | Medium | Shun | |
