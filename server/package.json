@@ -1,5 +1,5 @@
 {
-  "name": "UTSC Hub",
+  "name": "UTSCHub",
   "version": "1.0.0",
   "description": "A web application that is a mix ecommerce and social media for UTSC students",
   "main": "index.js",
