@@ -13,6 +13,7 @@
 | As a UTSC student, I want to be able to quickly find and message other UTSC students in order to socialize and communicate. | Low | Andrew | |
 | As a UTSC club owner, I want to be able to post the key events or items that I would like to advertise among targeted UTSC students. | Low | Shun | |
 | As a UTSC student, I can subscribe to specific people, groups, or clubs, and I can get notified once there are any updates by either clicking on the notification bar or on the profile page. | Medium | Shun | |
-
-
-
+| As a registered UTSC student, I would like to have a profile section where fellow users can view my basic information. | Medium | Nandhakishore | |
+| As a UTSC student who has created a profile page and selling items on the market, I would like to view the complete list of items that I am currently selling on the profile page. | Medium | Nandhakishore | |
+| As a UTSC student who has created a profile page and purchased an item on the market, I would like to view my order on the profile page so I will know the relevant information regarding pickup. | Medium | Nandhakishore | |
+| As a UTSC student who has created a profile page, I would like to be able to edit profile information whenever I feel necessary. | Low | Nandhakishore | |
