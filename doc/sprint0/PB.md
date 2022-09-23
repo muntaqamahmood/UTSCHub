@@ -8,8 +8,8 @@
 | As a student customer, I want to be able to search through the Marketplace for items, so that I can quickly and easily find items that is of genuine interest or value to me. | Medium | Muntaqa | |
 | As a UTSC student, I want to be able to search through the Social Tab for upcoming/ongoing events, posts and people, so that I can quickly and easily find events that I want to attend, or find groups or people I want to interact with. | Medium | Muntaqa | |
 | As a UTSC student, I want to be able to join events in interested in with other like minded UTSC students, so that I can socialize and have pursue my hobbies. | Medium | Andrew | |
-| As a UTSC student, I want to be able to quickly find and message other UTSC students in order to socialize and communicate. | Low | Andrew | |
-| As a UTSC student, I want to be able to post the key events or items that I would like to advertise among targeted UTSC students. | Low | Shun | |
+| As a UTSC student, I want to be able to quickly find and message other UTSC students so that I can socialize and communicate with them. | Low | Andrew | |
+| As a UTSC student, I want to be able to post the key events so that other UTSC students can see and join me on an event. | Low | Shun | |
 | As a UTSC student, I can subscribe to specific people, groups, or clubs, and I can get notified once there are any updates by either clicking on the notification bar or on the profile page. | Medium | Shun | |
 | As a registered UTSC student, I would like to have a profile section where fellow users can view my basic information. | Medium | Nandhakishore | |
 | As a UTSC student who has created a profile page and selling items on the market, I would like to view the complete list of items that I am currently selling on the profile page. | Medium | Nandhakishore | |
