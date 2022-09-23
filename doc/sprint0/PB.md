@@ -12,7 +12,7 @@
 | As a UTSC student, I want to be able to post the key events so that other UTSC students can see and join me on an event. | Low | Shun | |
 | As a registered UTSC student, I would like to have a profile section so that fellow users can view my basic information. | Medium | Nandhakishore | |
 | As a UTSC student who has created a profile page and selling items on the market, I would like to view the complete list of items so that I know what I am currently selling on the profile page. | Medium | Nandhakishore | |
-| As a UTSC student who has created a profile page and purchased an item on the market, I would like to view my order on the profile page so that I will know the relevant information regarding pickup. | Medium | Nandhakishore | |
+| As a UTSC student who has created a profile page and purchased an item on the market, I would like to view my order on the profile page so that I will know what I have bought. | Medium | Nandhakishore | |
 | As a UTSC student who has created a profile page, I would like to be able to edit profile information so that I can adjust my information whenever I feel necessary. | Low | Nandhakishore | |
 | As a student seller, I want to be able to take down my item listings, so that I can let others know  I am no longer selling them. | Medium | Henry | |
 | As a potential student customer, I want to leave comments and reviews on items, so that I can let other people know my thoughts on the item. | Low | Henry | |
