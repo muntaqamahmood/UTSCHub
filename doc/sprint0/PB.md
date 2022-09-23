@@ -20,3 +20,5 @@
 | As a seller, I want to be able to take down my item listings, so I can let others know that I am no longer selling them. | Medium | Henry | |
 | As a potential customer, I want to leave comments and reviews on items, so I can let other people know my thoughts on the item. | Low | Henry | |
 | As a customer, I want to be able to bookmark items that I might want to buy later, so I can check on them some time in the future | Low | Henry | |
+| As a UTSC student seller, I want to edit a selling poster any time so that I can add more information about my clothes or change the price of my clothes after making the post. | Low | John | |
+| As a UTSC student seller, I want to be able to to post clothes designed by myself for my fashion brand so that other UTSC students can see the price and description of my clothes and purchase them. | Medium | John | |
