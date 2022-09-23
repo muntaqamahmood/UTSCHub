@@ -13,5 +13,6 @@ Our website could further be broken down into three sub parts: Market place, Eve
 <br>
 
 ## Key Usage Scenarios:
- Our target users’ primary key usage scenarios could possibly be 3rd and 4th year students who would graduate soon and would like to sell thier belongings that are no longer necessary (textbooks, study-related commodities, etc.). The faculty members who would want to advertise a certain on campus event would be one of our primary target users as well. Atheletic students who want to organise a pick up game in pan am or the UTSC valley can use the app to either host a game or join a game.
+Our target users’ primary key usage scenarios could possibly be 3rd and 4th year students who would graduate soon and would like to sell thier belongings that are no longer necessary (textbooks, study-related commodities, etc.). The faculty members who would want to advertise a certainevent on campus  would be one of our primary target users as well. Atheletic students who want to organise a pick up game in pan am or the UTSC valley can use the app to either host a game or join a game.
+
   

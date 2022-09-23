@@ -22,4 +22,6 @@ We are planning to meet 3 to 4 times a week on discord. The dates set are Monday
 ### What lessons should you take forward to the next phase?
 
 - Having shorter meetings and clearly distribute the work during that time. Try to finish the work before 5pm of Friday.
-- 
+- Communicating well with team members and knowing gitflow workflow properly so that we can avoid merge conflicts and other confusions regarding version control
+- Feel free to ask questions to verify any constraints and also feel free to ask for help.
+

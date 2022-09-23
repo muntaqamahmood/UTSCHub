@@ -8,4 +8,4 @@
 | Shun Murai                          | muraishu | 1006187430 | shun.murai@mail.utoronto.ca      | 4168261946          | YadonAkiyama#0379 |
 | Andrew Qian                         | qianand1 | 1006444224 | andrewqian2001@gmail.com         | discord             | Feedkage#9697     |
 
-Discord: https://discord.gg/Cq3FgaRd
+Discord: https://discord.gg/m6tcwxa2zJ
