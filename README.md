@@ -1,4 +1,4 @@
-UTSC_Hub is an application that targets all UTSC students and faculty members to distribute further convenience within the community and explore the embedded demands and supplies by offering a UTSC specific ECommerce platform. Besides that, our website also aims to accomplish more sophisticated community engagement with our distinctive SNS and event planning features. 
+UTSC Hub is an application that targets all UTSC students and faculty members to distribute further convenience within the community and explore the embedded demands and supplies by offering a UTSC specific eCommerce platform. Besides that, our website also aims to accomplish more sophisticated community engagement with our distinctive SMS and event planning features. 
 
 
  ## Development
