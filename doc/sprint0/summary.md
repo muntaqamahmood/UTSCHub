@@ -7,7 +7,7 @@ UTSC students (Lain Stieltjes) who want to purchase university merchandise and o
 UTSC students (Kevin) who want to gather people to play a particular sport <br>
 UTSC students (Lain Stieltjes) who want to join other people to play a particular sport <br>
 UTSC students (Kanye East) and faculty who want to connect with fellow UTSC students and get more information regarding the university <br>
-(Note: For the user's names, check their personas in [Personas.pdf](https://github.com/UTSCCSCC01/finalprojectf22-tech-army/blob/main/doc/sprint0/Personas.pdf)
+(Note: For the user's names, check their personas in [Personas.pdf](https://github.com/UTSCCSCC01/finalprojectf22-tech-army/blob/main/doc/sprint0/Personas.pdf))
 
 
 ## Key Usage Scenarios:
