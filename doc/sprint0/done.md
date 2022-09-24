@@ -8,4 +8,4 @@
 
 - At Sprint Review meetings, only the Product Owner has the power to officially 'accept' the completion of User Stories.
 
-- Done signifies that the features being implemented for a specific user story have been developed, tested, and meet the group's requirements.
+- Done signifies that the features being implemented for a specific user story have been developed, tested, and met the group's requirements.
