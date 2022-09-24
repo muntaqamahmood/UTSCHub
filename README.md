@@ -32,3 +32,13 @@ UTSC_Hub is an application that targets all UTSC students and faculty members to
  How it should look like after running `npm run server`:
 
  ![image](https://user-images.githubusercontent.com/69706702/192059643-aab9938c-783b-497e-b19f-4291653a4cec.png)
+
+
+
+## Contribution
+
+To get setup, see the Development section above.
+
+Once you get a ticket to work on, checkout the develop branch then make a new branch with the start of the name being the ticket ID. Ex: Ticket ID is `PROJ-123`, branch name can be `PROJ-123-add-feature`.
+
+Once you are done with your changes, push your changes to a new remote branch with the same name as your local branch, then open a PR. The PR title should give a high-level description of what the PR does, and the description should have details on the approach and implementation. Add 2 people to review the PR. After changes are made and approved, the PR can be merged by one of the reviewers.
