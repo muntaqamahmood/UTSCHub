@@ -1,5 +1,5 @@
 ## Motivation:
-A UTSC community focused Hub is quite hard to find, there are Facebook groups for finding events or buying/selling UTSC specific merch, textbooks or other course materials, but what if we can have all these things in one place?! Presenting to you, UTSC Hub! 
+A UTSC community focused Hub is quite hard to find, there are Facebook groups for finding events and people with similar course schedules or Amazon for buying/selling but they are not UTSC specific merch, textbooks or other course materials, what if we can have all these things in one place?! Presenting to you, UTSC Hub! 
 ## Project Description:
 UTSC Hub is an application that targets all UTSC students and faculty members to distribute further convenience within the community and explore the embedded demands and supplies by offering a UTSC specific eCommerce platform. Besides that, our website also aims to accomplish more sophisticated community engagement with our distinctive SMS and event planning features. 
 
