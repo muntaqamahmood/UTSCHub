@@ -10,7 +10,8 @@ Existing products (e.g Ebay) have too many unrelated items and does not have eno
 It is an e-commerce app but can also be used as a social media app, for e.g you do basic things like message other people and create your posts, you can network with other UTSC students with similar interests, plans for renting rooms, find and connect with people that are taking the same classes as you, (potentially) rate courses and professors?, (potentially) built-in group chats for courses?
 
 
-## If your product is better for specific users and/or specific scenarios, Who are the users and/or what are the scenarios? 
+# If your product is better for specific users and/or specific scenarios, 
+## Who are the users and/or what are the scenarios? 
    - Users: University of Toronto Scarborough students
    - Scenario 1: Freshmen UTSC students looking for roommates to move in with on res or in apartments/houses nearby campus through the SMS feature.
    - Scenario 2: UTSC students looking to buy or sell things not restricted to textbooks or other course materials
