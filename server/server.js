@@ -17,6 +17,9 @@ async function connect() {
 
 connect();
 
+// Initialize middleware
+app.use(express.json({extended: false}));
+
 app.get('/', (request, response) => response.send('Hello World'));
 
 //Route Definitions
