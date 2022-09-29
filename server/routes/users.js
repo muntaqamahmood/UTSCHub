@@ -5,6 +5,8 @@ const User = require("../models/User");
 const jsonwebtoken = require('jsonwebtoken');
 const constants = require('../config/constants.json');
 const bcrypt = require('bcryptjs');
+const auth = require('../routes/auth');
+const controller = require('../controller/controller');
 
 
 //http://localhost:8000/api/users
@@ -49,5 +51,16 @@ router.post('/', [
         response.sendStatus(500); //server error
     }
 }); 
+
+
+/*
+    ROUTE: DELETE api/users
+    DESC: Delete a user
+    ACCESS: Private
+*/
+//check controller.js for the delete function
+router.delete('/', auth, controller.deleteUser);
+
+
 
 module.exports = router;
