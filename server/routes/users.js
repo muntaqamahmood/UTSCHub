@@ -5,7 +5,7 @@ const User = require("../models/User");
 const jsonwebtoken = require('jsonwebtoken');
 const constants = require('../config/constants.json');
 const bcrypt = require('bcryptjs');
-const auth = require('../routes/auth');
+const auth = require('../middleware/auth');
 const controller = require('../controller/controller');
 
 
