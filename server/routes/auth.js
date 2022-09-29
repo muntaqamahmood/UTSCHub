@@ -5,21 +5,7 @@ const User = require("../models/User");
 const jsonwebtoken = require('jsonwebtoken');
 const constants = require('../config/constants.json');
 const bcrypt = require('bcryptjs');
-
-const auth = (request, response, next) => {
-    const token = request.header('x-auth-token');
-
-    if(!token){
-        return response.status(401).json({message: 'No token, authorization denied'});
-    }
-    try {
-        const decoded = jsonwebtoken.verify(token, constants.jsonwebtokenSecret);
-        request.userID = decoded.userID;
-        next();
-    } catch(error) {
-        response.status(401).json({message: 'Token is not valid'});
-    }
-}
+const auth = require('../middleware/auth');
 
 //http://localhost:8000/api/auth
 
@@ -28,8 +14,15 @@ const auth = (request, response, next) => {
     DESC: Get logged in user
     ACCESS: Private (getting user thats logged in so it should be private)
 */
-router.get('/', (request, response) => { // note: it is just a slash since we defined the route already in server.js
-    response.send('Fetch logged in user');
+router.get('/', auth, async (request, response) => { // note: it is just a slash since we defined the route already in server.js
+    try{
+        //request.user is assigned in the middleware (auth) 
+        const user = await User.findById(request.user.id).select('-password');
+        response.json(user);
+    }catch (error) {
+        console.log(error.message);
+        response.status(500); 
+    }
 }); 
 
 /*

@@ -12,7 +12,7 @@ const User = require('../models/User');
 //controller to delete a user from the "database"
 exports.deleteUser = async (request, response) => {
     try {
-        await User.findByIdAndDelete(request.userID);
+        await User.findByIdAndDelete(request.user._id);
         response.json({message: "User deleted"});
     } catch(error) {
         console.log(error.message);
