@@ -93,9 +93,9 @@
     - 1 mark  = Database setup is complete
     - 0 marks = Database is not setup
 
-    Your mark: 0  
+    Your mark: 1  
    
-  Setup Total Mark: 2 / 3
+  Setup Total Mark: 3 / 3
 
 ---
 ## Documentation: README.md (max 3 marks)
@@ -220,5 +220,5 @@
    
 ---
 ## Total Mark  
-Sprint 0 Total Mark : 46 / 48
+Sprint 0 Total Mark : 47 / 48
 	
