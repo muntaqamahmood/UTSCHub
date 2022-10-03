@@ -6,6 +6,8 @@ import Signup from './Signup';
 import './index.css';
 import Login from './Login';
 import Dashboard from './Dashboard';
+import reportWebVitals from './reportWebVitals';
+import Home from './Pages/Home';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
