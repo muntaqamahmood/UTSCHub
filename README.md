@@ -1,13 +1,19 @@
-UTSC Hub is a web app for UTSC students to connect and buy/sell items.
+## Motivation:
+A UTSC community focused Hub is quite hard to find, there are Facebook groups for finding events and people with similar course schedules or Amazon for buying/selling but they are not UTSC specific merch, textbooks or other course materials, what if we can have all these things in one place?! Presenting to you, UTSC Hub! 
+## Project Description:
+UTSC Hub is an application that targets all UTSC students and faculty members to distribute further convenience within the community and explore the embedded demands and supplies by offering a UTSC specific eCommerce platform. Besides that, our website also aims to accomplish more sophisticated community engagement with our distinctive SMS and event planning features. 
 
 
- ## Development
+ ## Installation for our Software/System:
 
 
 
  ### Requirements
 
  - NodeJS (16.17.0 LTS)
+ 
+ Optional
+ - Postman (for manual testing of backend API)
 
  ### Setup
 
@@ -29,3 +35,13 @@ UTSC Hub is a web app for UTSC students to connect and buy/sell items.
  How it should look like after running `npm run server`:
 
  ![image](https://user-images.githubusercontent.com/69706702/192059643-aab9938c-783b-497e-b19f-4291653a4cec.png)
+
+
+
+## Contribution
+
+To get setup, see the Development section above.
+
+Once you get a ticket to work on, checkout the develop branch then make a new branch with the start of the name being the ticket ID. Ex: Ticket ID is `PROJ-123`, branch name can be `PROJ-123-add-feature`.
+
+Once you are done with your changes, push your changes to a new remote branch with the same name as your local branch, then open a PR. The PR title should give a high-level description of what the PR does, and the description should have details on the approach and implementation. Add 2 people to review the PR. After changes are made and approved, the PR can be merged by one of the reviewers.
