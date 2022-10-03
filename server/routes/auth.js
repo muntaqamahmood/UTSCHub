@@ -51,7 +51,6 @@ router.post('/', [
             constants.jsonwebtokenSecret, {
             expiresIn: 7200 //2 hours
         }, (error, token) => {
-            console.log('test');
             if(error) throw error;
             response.json({token});
         });
