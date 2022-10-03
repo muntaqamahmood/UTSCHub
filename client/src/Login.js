@@ -7,29 +7,45 @@ const Login = () => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState(null);
+    const [error, setError] = useState([]);
     const [loading, setLoading] = useState(false);
     
     const navigate = useNavigate();
 
     const handleLogin = () => {
 
-        axios.post("http://localhost:8000/api/users", {
-            username: username,
-            password: password
-        }).then(response => {
+        const body = { email: username, password: password };
+
+        let axiosConfig = {
+            headers: {
+                'Content-Type': 'application/json;charset=UTF-8',
+            }
+        };
+
+        axios.post('http://localhost:8000/api/auth',  body, axiosConfig)
+        .then(response => {
+            //console.log('response >>>', response);
             setLoading(false);
             setUserSession(response.data.token, response.data.user)
             navigate('/dashboard');
         }).catch(error => {
             setLoading(false);
-            if(error.response.status === 401 || error.response.data.status === 400){
-                setError(error.response.data.message);
+            console.error('error >>>', error);
+            if(error.response.status === 401 || error.response.status === 400){
+                if(error.response.data.message){
+                    setError(error.response.data.message);
+                }else{
+                    setError(error.response.data.errors[0].msg);
+                }
             }
             else {
                 setError("Something went wrong. Please try again later.");
             }
         });
+    }
+
+    const handleSignup = () => {
+        navigate('/signup');
     }
 
     return (
@@ -54,9 +70,15 @@ const Login = () => {
             {error && <div className="error">{error}</div>}
             <input
                 type="button"
-                value={loading ? "Loading..." : "Login"}
+                value={loading ? "Loading..." : "Log In"}
                 disabled={loading}
                 onClick={handleLogin}
+            />
+            <input
+                type="button"
+                value={loading ? "Loading..." : "Sign Up"}
+                disabled={loading}
+                onClick={handleSignup}
             />
         </div>
     )
