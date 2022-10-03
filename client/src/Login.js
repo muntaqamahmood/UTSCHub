@@ -7,50 +7,29 @@ const Login = () => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
+    const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
     
     const navigate = useNavigate();
 
     const handleLogin = () => {
 
-        const body = { email: username, password: password };
-
-        let axiosConfig = {
-            headers: {
-                'Content-Type': 'application/json;charset=UTF-8',
-            }
-        };
-
-        axios.post('http://localhost:8000/api/auth',  body, axiosConfig)
-        .then(response => {
-            console.log('response >>>', response);
+        axios.post("http://localhost:8000/api/users", {
+            username: username,
+            password: password
+        }).then(response => {
             setLoading(false);
             setUserSession(response.data.token, response.data.user)
             navigate('/dashboard');
         }).catch(error => {
             setLoading(false);
-            console.error('error >>>', error);
-            if(error.response.status === 401 || error.response.status === 400){
-                if(error.response.data.message){
-                    setError(error.response.data.message);
-                }else{
-                    const errorList = error.response.data.errors;
-                    let errorMsg = "";
-                    for(let error of errorList){
-                        errorMsg = errorMsg.concat(error.msg + '; ');
-                    }
-                    setError(errorMsg);
-                }
+            if(error.response.status === 401 || error.response.data.status === 400){
+                setError(error.response.data.message);
             }
             else {
                 setError("Something went wrong. Please try again later.");
             }
         });
-    }
-
-    const handleSignup = () => {
-        navigate('/signup');
     }
 
     return (
@@ -75,15 +54,9 @@ const Login = () => {
             {error && <div className="error">{error}</div>}
             <input
                 type="button"
-                value={loading ? "Loading..." : "Log In"}
+                value={loading ? "Loading..." : "Login"}
                 disabled={loading}
                 onClick={handleLogin}
-            />
-            <input
-                type="button"
-                value={loading ? "Loading..." : "Sign Up"}
-                disabled={loading}
-                onClick={handleSignup}
             />
         </div>
     )
