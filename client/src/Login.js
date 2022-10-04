@@ -7,7 +7,7 @@ const Login = () => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState([]);
+    const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
     
     const navigate = useNavigate();
@@ -24,7 +24,7 @@ const Login = () => {
 
         axios.post('http://localhost:8000/api/auth',  body, axiosConfig)
         .then(response => {
-            //console.log('response >>>', response);
+            console.log('response >>>', response);
             setLoading(false);
             setUserSession(response.data.token, response.data.user)
             navigate('/dashboard');
@@ -35,7 +35,12 @@ const Login = () => {
                 if(error.response.data.message){
                     setError(error.response.data.message);
                 }else{
-                    setError(error.response.data.errors[0].msg);
+                    const errorList = error.response.data.errors;
+                    let errorMsg = "";
+                    for(let error of errorList){
+                        errorMsg = errorMsg.concat(error.msg + '; ');
+                    }
+                    setError(errorMsg);
                 }
             }
             else {
