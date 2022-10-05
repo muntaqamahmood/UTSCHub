@@ -1,12 +1,14 @@
 import { useState } from "react";
 import axios from 'axios';
 import './signupLogin.css';
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
 
     const initialValues = { username: "", mailAddress: "", password: "" };
     const [formValues, setFormValues] = useState(initialValues);
     const [formErrors, setFormErrors] = useState([]);
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         // console.log(e.target.value);
@@ -26,6 +28,7 @@ function Signup() {
         axios.post('http://localhost:8000/api/users',  body, axiosConfig)
         .then(res => {
             console.log(res);
+            navigate('/dashboard');
         }).catch(error => {
             console.error(error);
         })
