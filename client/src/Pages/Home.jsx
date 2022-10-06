@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../Components/Navbar'
 import Button from '@mui/material/Button'
+import ProfileInfo from '../Components/ProfileInfo'
 
 const Home = () => {
   return (
@@ -8,7 +8,7 @@ const Home = () => {
   
     <div style={{paddingLeft: "300px"}}>
          <div>
-            <Navbar/>
+            <ProfileInfo/>
 
             
          </div>
@@ -18,10 +18,26 @@ const Home = () => {
 
 
     <div style={{paddingLeft: "300px",
-                paddingTop:"20px"}}>
+                paddingTop:"20px"
+                }}>
+
+          <span>
+
           <Button variant = "contained" size="large" color = "secondary">My events</Button>
-         <Button variant = "contained" size="large" color = "secondary">My sells</Button>
+          </span>
+         
+         <span style ={{paddingLeft:"20px",
+                       }}>
+            <Button variant = "contained" size="large" color = "secondary">My sells</Button>
+
+         </span>
+       
+
+
+
     </div>
+
+    
 
 
     <div style={{paddingLeft: "1000px",

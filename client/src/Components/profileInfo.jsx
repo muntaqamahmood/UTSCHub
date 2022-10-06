@@ -3,7 +3,7 @@ import coverIMG from '../assets/profileBackground.png'
 import profilepic from'../assets/profilepic1.png'
 import Button from '@mui/material/Button'
 
-const Navbar = () => {
+const ProfileInfo = () => {
 
 
 
@@ -44,4 +44,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default ProfileInfo
