@@ -1,9 +1,5 @@
 export const getUser =() => {
     const userStr = sessionStorage.getItem("name");
-
-    console.log("test");
-   //console.log(JSON.parse(userStr));
-   //JSON.parse(userStr);
     if (userStr) return JSON.parse(userStr);
     else return null;
 }
