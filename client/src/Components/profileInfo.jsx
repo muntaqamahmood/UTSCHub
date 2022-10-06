@@ -6,14 +6,12 @@ import { getUser } from '../Utils/Common'
 
 const ProfileInfo = () => {
     
-  console.log("test");
-  const user = getUser();
 
   return (
     <>
 
          <div>
-             welcome back  {user.name}<pre></pre>
+             welcome back <pre></pre>
         </div>
     
   

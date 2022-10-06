@@ -6,12 +6,11 @@ import { useNavigate } from "react-router-dom";
 
 const Home = () => {
 
-  console.log("start");
   const navigate = useNavigate();
 
 
  const handleLogout =() => {
-    removeUserSession();
+    //removeUserSession();
     navigate("/");
  }
   
