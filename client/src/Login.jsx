@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { setUserSession } from "./Utils/Common";
+import { getToken, setUserData, setUserSession } from "./Utils/Common";
 
 const Login = () => {
 
@@ -23,11 +23,27 @@ const Login = () => {
         };
 
         axios.post('http://localhost:8000/api/auth',  body, axiosConfig)
+        
         .then(response => {
-            console.log('response >>>', response);
-            setLoading(false);
-            setUserSession(response.data.token, response.data.user)
+
+            setUserSession(response.data.token);
+            let axiosConfig = {
+                headers:{'x-auth-token':getToken(),}
+            };
+
+            axios.get('http://localhost:8000/api/auth',axiosConfig).then(response =>{
+
+                console.log("hahah");
+                console.log(response);
+                setLoading(false);
+                
+                setUserData(response.data.email)
+
+            })
+        
+           
             navigate('/dashboard');
+
         }).catch(error => {
             setLoading(false);
             console.error('error >>>', error);

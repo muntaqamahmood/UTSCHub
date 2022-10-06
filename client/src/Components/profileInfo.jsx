@@ -2,16 +2,18 @@ import React from 'react'
 import coverIMG from '../assets/profileBackground.png'
 import profilepic from'../assets/profilepic1.png'
 import Button from '@mui/material/Button'
+import { getUser } from '../Utils/Common'
 
 const ProfileInfo = () => {
-
-
+    
+  console.log("test");
+  const user = getUser();
 
   return (
     <>
 
          <div>
-             welcome back <pre></pre>
+             welcome back  {user.name}<pre></pre>
         </div>
     
        

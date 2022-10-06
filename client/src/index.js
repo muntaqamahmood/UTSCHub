@@ -5,7 +5,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Signup from './Signup';
 import './index.css';
 import Login from './Login';
-import Dashboard from './Dashboard';
 import reportWebVitals from './reportWebVitals';
 import Home from './Pages/Home';
 
@@ -14,7 +13,7 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" exact element={<Login />}/>
-      <Route path="/dashboard" element={<Dashboard/>} />
+      <Route path="/dashboard" element={<Home/>} />
       <Route path="/signup" exact element={<Signup />}/>
     </Routes>
   </BrowserRouter>
