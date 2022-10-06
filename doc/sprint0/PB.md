@@ -19,7 +19,7 @@
 | As a student customer (Lain Stieltjes), I want to be able to bookmark items that I might want to buy later, so that I can check on them some time in the future | Low | Henry | |
 | As a UTSC student seller (Kanye East), I want to edit a selling poster any time so that I can add more information about my clothes or change the price of my clothes after making the post. | Low | John | |
 | As a UTSC student seller(Kanye East), I want to be able to to post clothes designed by myself for my fashion brand so that other UTSC students can see the price and description of my clothes and purchase them. | Medium | John | |
-| As a user (Kevin Lian), I want to keep my account securely and privately so that everyone else can’t have access to my account and I don’t have to worry about personal information leakage. | High | Shence | |
+| As a user (Kevin Lian), I want to autheticate my account securely and privately so that everyone else can’t have access to my account and I don’t have to worry about personal information leakage. | High | Shence | |
 | As a buyer (Lain Stieltjes), I want to be able to view only products which satisfied my needs so that I can save my time from going through every post. | Low | Shence | |
 | As a UTSC student seller (Kanye East), I want to be able to add pictures of my well-designed clothes into the product description so that it can attract more customers and also users could gain a better experience while using the website. | Medium | Shence | |
 | As a UTSC student (Kevin Lian), I want to be able to delete my user account so that I can erase all my information from the UTSC Hub website. | Medium | Muntaqa | |
