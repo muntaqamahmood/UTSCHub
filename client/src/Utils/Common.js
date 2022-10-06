@@ -21,8 +21,8 @@ export const setUserSession = (token) => {
     //sessionStorage.setItem("email", JSON.stringify(email));
 }
 
-export const setUserData = (email) => {
-   // sessionStorage.setItem("name", JSON.stringify(user));
+export const setUserData = (name,email) => {
+    sessionStorage.setItem("name", JSON.stringify(name));
     sessionStorage.setItem("email", JSON.stringify(email));
 }
 

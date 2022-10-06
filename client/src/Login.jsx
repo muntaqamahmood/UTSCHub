@@ -26,6 +26,7 @@ const Login = () => {
         
         .then(response => {
 
+            setLoading(false);
             setUserSession(response.data.token);
             let axiosConfig = {
                 headers:{'x-auth-token':getToken(),}
@@ -33,13 +34,12 @@ const Login = () => {
 
             axios.get('http://localhost:8000/api/auth',axiosConfig).then(response =>{
 
-                console.log("hahah");
                 console.log(response);
-                setLoading(false);
+               setLoading(false);
                 
-                setUserData(response.data.email)
-
+               setUserData( ,response.data.email)
             })
+            
         
            
             navigate('/dashboard');
