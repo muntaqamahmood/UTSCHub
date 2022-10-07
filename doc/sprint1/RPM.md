@@ -14,17 +14,17 @@ The release planning meeting was held in our standup channel in the CSCC01 Disco
 
 ## Project Scope:
 
-- Users must be able to sign up to create an account (TA-1), login (TA-2) in an authenticated manner (TA-3), log out, and delete their account (TA-6).
+- Users must be able to sign up to create an account `(TA-1)`, login `(TA-2)` in an authenticated manner `(TA-3)`, log out, and delete their account `(TA-6)`.
 
-- Users should be able to navigate the market page, where they can search for items (TA-20), filter items (TA-21), add new items (TA-22), edit item information (TA-23), and delete items they are selling (TA-24).
+- Users should be able to navigate the market page, where they can search for items `(TA-20)`, filter items `(TA-21)`, add new items `(TA-22)`, edit item information `(TA-23)`, and delete items they are selling `(TA-24)`.
 
-- Users must be able to have their profile page (TA-4), where they can add profile pictures (TA-26), edit their profile (TA-27), have a list of items they are selling (TA-28) and have a list of items ordered (TA-29). 
+- Users must be able to have their profile page `(TA-4)`, where they can add profile pictures `(TA-26)`, edit their profile `(TA-27)`, have a list of items they are selling `(TA-28)` and have a list of items ordered `(TA-29)`. 
 
-- On the market page, users should be able to save items to their profile (TA-30), get items added to their cart (TA-31), and comment on items posted (TA-32).
+- On the market page, users should be able to save items to their profile `(TA-30)`, get items added to their cart `(TA-31)`, and comment on items posted `(TA-32)`.
 
-- Users should be able to navigate the events page (TA-33), create events (TA-34), and search for events (TA-35).
+- Users should be able to navigate the events page `(TA-33)`, create events `(TA-34)`, and search for events `(TA-35)`.
 
-- Users should be able to navigate the SNS page, where they can message fellow users (TA-36) and search for who to chat with (TA-37).
+- Users should be able to navigate the SNS page, where they can message fellow users `(TA-36)` and search for who to chat with `(TA-37)`.
 
 ## Participants:
 
