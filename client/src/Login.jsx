@@ -36,8 +36,9 @@ const Login = () => {
 
                 console.log(response);
                setLoading(false);
-                
-               setUserData( ,response.data.email)
+
+               setUserData( response.data.name,response.data.email);
+              
             })
             
         
