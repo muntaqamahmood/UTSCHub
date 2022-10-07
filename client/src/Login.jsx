@@ -38,13 +38,14 @@ const Login = () => {
                setLoading(false);
 
                setUserData( response.data.name,response.data.email);
-              
-            })
-            
-        
-           
-            navigate('/dashboard');
 
+                navigate('/dashboard');
+            }).catch(error => {
+                setUserData("{{Error loading user name}}", "{{Error loading email address}}");
+                console.error('error >>>', error);
+                console.error("Can't load user data.")
+                navigate('/dashboard');
+            });
         }).catch(error => {
             setLoading(false);
             console.error('error >>>', error);
