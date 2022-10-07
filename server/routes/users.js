@@ -59,7 +59,6 @@ router.post('/', [
     DESC: Delete a user
     ACCESS: Private
 */
-//check controller.js for the delete function
 router.delete('/', auth, async (request, response) =>{
     try {
         await User.findByIdAndDelete(request.user.id);
