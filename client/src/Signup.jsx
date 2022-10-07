@@ -28,7 +28,7 @@ function Signup() {
         axios.post('http://localhost:8000/api/users',  body, axiosConfig)
         .then(res => {
             console.log(res);
-            navigate('/dashboard');
+            navigate('/');
         }).catch(error => {
             console.error(error);
         })
