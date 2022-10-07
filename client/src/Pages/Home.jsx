@@ -8,9 +8,8 @@ const Home = () => {
 
   const navigate = useNavigate();
 
-
  const handleLogout =() => {
-    //removeUserSession();
+   removeUserSession();
     navigate("/");
  }
   
