@@ -6,7 +6,6 @@ const jsonwebtoken = require('jsonwebtoken');
 const constants = require('../config/constants.json');
 const bcrypt = require('bcryptjs');
 const auth = require('../middleware/auth');
-const controller = require('../controller/controller');
 
 
 //http://localhost:8000/api/users
@@ -60,8 +59,15 @@ router.post('/', [
     DESC: Delete a user
     ACCESS: Private
 */
-//check controller.js for the delete function
-router.delete('/', auth, controller.deleteUser);
+router.delete('/', auth, async (request, response) =>{
+    try {
+        await User.findByIdAndDelete(request.user.id);
+        response.json({message: "User deleted"});
+    } catch(error) {
+        console.log(error.message);
+        response.json({message: error.message});
+    }
+});
 
 
 
