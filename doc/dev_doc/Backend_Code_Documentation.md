@@ -4,14 +4,17 @@ The user will enter their UofT email and password, then press the login button. 
 
 ### Login Flow:
 #### Send a post request to http://localhost:8000/api/auth, requires headers
+![Screenshot 2022-10-07 185544](https://user-images.githubusercontent.com/69706702/194673964-259292ff-d3c4-48a8-ae84-84d3753ee81b.png)
 
 
 
 #### Returns JWT for authorization
+![image](https://user-images.githubusercontent.com/69706702/194673951-ea0a9e3e-c951-41a9-aca7-db74a2584213.png)
 
 
 
 #### Use JWT and send a get request to http://localhost:8000/api/auth, which returns a User object
+![image](https://user-images.githubusercontent.com/69706702/194674020-cd9d394a-bff3-4da5-b910-1767ec30b72c.png)
 
 
 ## Register: 
@@ -20,9 +23,11 @@ The user enters his/her UTOrid username, email address, and password and then pr
 ### Register Flow:
 #### Send post request to http://localhost:8000/api/users
 #### Requires headers
+![image](https://user-images.githubusercontent.com/69706702/194674055-547d2c5e-ae57-447c-b22f-d1fae6757eaf.png)
 
 
 #### Returns JWT for authentication
+![image](https://user-images.githubusercontent.com/69706702/194674087-373d84a7-6788-404a-b001-a539537028a8.png)
 
 
 ## Delete User:
@@ -30,8 +35,9 @@ After you successfully log in, you go to the profile page, and there’s a logou
 
 ### Delete Flow:
 #### Send delete request to http://localhost:8000/api/users
-#### No headers
+#### No headers, returns response if deletion is successful
+![image](https://user-images.githubusercontent.com/69706702/194674125-d7c97d0d-bdd1-422f-b693-0dcbd3f336b4.png)
 
 
 
-#### Returns response if deletion is successful
+
