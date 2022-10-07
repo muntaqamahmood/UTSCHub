@@ -22,22 +22,20 @@ const Login = () => {
             }
         };
 
-        axios.post('http://localhost:8000/api/auth',  body, axiosConfig)
-        
-        .then(response => {
+        axios.post('http://localhost:8000/api/auth',  body, axiosConfig).then(response => {
 
             setLoading(false);
             setUserSession(response.data.token);
             let axiosConfig = {
-                headers:{'x-auth-token':getToken(),}
+                headers:{'x-auth-token': getToken()}
             };
 
             axios.get('http://localhost:8000/api/auth',axiosConfig).then(response =>{
 
                 console.log(response);
-               setLoading(false);
+                setLoading(false);
 
-               setUserData( response.data.name,response.data.email);
+                setUserData(response.data.name, response.data.email);
 
                 navigate('/dashboard');
             }).catch(error => {
@@ -46,6 +44,7 @@ const Login = () => {
                 console.error("Can't load user data.")
                 navigate('/dashboard');
             });
+
         }).catch(error => {
             setLoading(false);
             console.error('error >>>', error);
