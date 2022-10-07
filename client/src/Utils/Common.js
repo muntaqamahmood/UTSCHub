@@ -2,15 +2,16 @@ export const getUser =() => {
     const userStr = sessionStorage.getItem("name");
 
     console.log("test");
-    console.log(JSON.parse(userStr));
-
+   //console.log(JSON.parse(userStr));
+   //JSON.parse(userStr);
     if (userStr) return JSON.parse(userStr);
     else return null;
 }
 
 export const getEmail =() => {
     const emailStr = sessionStorage.getItem("email");
-    console.log(JSON.parse(emailStr));
+   //console.log(JSON.parse(emailStr));
+  // JSON.parse(emailStr);
 
 
     if (emailStr) return JSON.parse(emailStr);
