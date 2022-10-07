@@ -5,13 +5,14 @@
 - Backend: creating a sign up/ log in feature, creating and routing events, deleting user, decide how to populate user accounts
 - Frontend: creating Landing Page, Sign up page, Login Page, other interfaces.
 
-## Log of Stand-up Meetings
-- Sept. 28, 2022 ~ Sprint 1 Stand-up 1
+## Log of Sprint 1 Stand-up Meetings:
+(See the [C01 discord server channel](https://discord.com/channels/1016379148660392018/1023607436092915814/1026306768311173212) for more detailed stand-up updates by each team members)
+- Sept. 28, 2022 - Sprint 1 Stand-up 1
     - Sprint Planning
     - Setting up Jira: adding User Stories as tickets and dividing tasks into subtasks within team members
     - Deciding on user stories assignees and dividing the tickets within team members.    
 
-- Oct. 2, 2022 ~ Sprint 1 Stand-up 2
+- Oct. 2, 2022 - Sprint 1 Stand-up 2
     - Team updates
     - Discuss any conflicts/blockers
     - Finalized on a software architecture pattern and discussed ideas for CRC cards.
