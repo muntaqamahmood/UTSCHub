@@ -1,8 +1,9 @@
 import React from 'react'
 import Button from '@mui/material/Button'
 import ProfileInfo from '../Components/profileInfo'
-import { removeUserSession } from '../Utils/Common'
+import { removeUserSession,getToken } from '../Utils/Common'
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Home = () => {
 
@@ -13,6 +14,27 @@ const Home = () => {
     navigate("/");
  }
   
+
+ let axiosConfig = {
+  headers: {
+      'x-auth-token': getToken(),
+  }
+};
+
+const handleDeleteAccount = () => {
+
+  axios.delete('http://localhost:8000/api/users', axiosConfig).then(response =>{
+  
+   console.log(response);
+    navigate("/");
+  })
+}
+
+ 
+
+
+
+
   return (
     <>
   
@@ -50,10 +72,20 @@ const Home = () => {
     
 
 
-    <div style={{paddingLeft: "1000px",
+    <div style={{paddingLeft: "800px",
                  paddingTop:"250px"
               }}>
-        <Button variant = "contained" size="large" color = "secondary" onClick={handleLogout}>Quit account</Button>
+                <span>
+                    <Button variant = "contained" size="large" color = "secondary" onClick={handleLogout}> Log out</Button>
+                </span>
+            
+                <span style ={{paddingLeft:"20px",
+                       }}>
+                             <Button variant = "contained" size="large" color = "secondary" onClick={handleDeleteAccount} > Delete Account</Button>
+       
+
+                       </span>
+       
     </div>
    
 
