@@ -60,7 +60,7 @@ const handleDeleteAccount = () => {
          
          <span style ={{paddingLeft:"20px",
                        }}>
-            <Button variant = "contained" size="large" color = "secondary">My sells</Button>
+            <Button variant = "contained" size="large" color = "secondary">My items for sale</Button>
 
          </span>
        
