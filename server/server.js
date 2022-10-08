@@ -1,7 +1,7 @@
 //Use "npm run server", to run server with nodemon
 const express = require('express'); 
 const mongoose = require('mongoose');
-
+const cors = require('cors')
 const app = express();
 
 const uri = "mongodb+srv://UTSCHub_Admin:LGMSRdTNPrdVjEw9@cluster0.pcmxj1f.mongodb.net/?retryWrites=true&w=majority"
@@ -16,6 +16,11 @@ async function connect() {
 }
 
 connect();
+
+app.use(cors());
+
+// Initialize middleware
+app.use(express.json({extended: false}));
 
 app.get('/', (request, response) => response.send('Hello World'));
 
