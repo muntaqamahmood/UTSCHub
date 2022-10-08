@@ -8,7 +8,6 @@ export const getUser =() => {
     else return null;
 }
 
-
 export const getEmail =() => {
     const emailStr = sessionStorage.getItem("email");
     //console.log(JSON.parse(emailStr));
@@ -22,7 +21,6 @@ export const getEmail =() => {
 export const getToken =() => {
     return sessionStorage.getItem("token") || null;
 }
-
 
 export const setUserSession = (token) => {
     sessionStorage.setItem("token", token);

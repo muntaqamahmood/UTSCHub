@@ -52,7 +52,7 @@ function Signup() {
         return errors;
     }
   return (
-    <div className="formContainer">
+    <div className="formContainer" style={{paddingLeft: "300px"}}>
         <form onSubmit={(e) => handleSubmit(e)}>
             <h1>Signup Form</h1>
             <hr />

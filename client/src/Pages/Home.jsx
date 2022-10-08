@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '@mui/material/Button'
-import ProfileInfo from '../Components/profileInfo'
+import ProfileInfo from '../Components/ProfileInfo'
 import { removeUserSession,getToken } from '../Utils/Common'
 import { useNavigate } from "react-router-dom";
 import axios from "axios";

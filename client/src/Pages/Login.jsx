@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { getToken, setUserData, setUserSession } from "./Utils/Common";
+import { getToken, setUserData, setUserSession } from "../Utils/Common";
 
 const Login = () => {
 
@@ -71,7 +71,7 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div style={{paddingLeft: "300px"}}>
             Login <br /><br />
             <div>
                 UofT Email<br />
