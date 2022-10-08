@@ -1,4 +1,10 @@
 # Sprint 1
+
+## Sprint 1 Planning Meeting
+We had our sprint 1 Planning meeting on the C01 Discord server on September 28th, 2022, with the purpose of choosing which user stories should be included, identifying the associated tasks to the user stories, and dividing the work among the team members. During this meeting, every member of our team was present.
+
+We chose five user stories at the planning meeting that we thought required for the fundamental functionality of our application. These user stories enable users of our application to register, create an account, login to their registered account which has been authenticated at the time of registration. We next divide the user stories into subtasks, utilize planning poker to evaluate the subtasks, and distribute them along with document responsibilities among our members.
+
 ## Sprint Goal:
 - Learning MERN Stack and other frameworks/tools
 - Getting started: Setting up Jira, learning MVC, planning software architectural design for our project
@@ -30,9 +36,45 @@
     - Reviewed Sprint 1 Deliverables
     - Updating team members on progress made by each member in this Sprint.
 
-### Story Points assignment for Sprint 1 User Stories: 
-- US1: Sign Up = 2 Story Points
-- US2: Login Feature = 2 Story Points
-- US3: Autheticate Feature = 3 Story Points
-- US4: Delete Feature = 2 Story Points
-- US5: Profile Page = 5 Story Points
+# User Stories for Sprint 1:
+- User Story 1 - TA-1: Sign Up
+    - want to be able to sign up for a personal account on UTSC Hub
+- User Story 2 - TA-2: Login Feature 
+    - be able to log in with my email/account number and password
+    - system will authenticate me and redirect me to the home page (profile page).
+- User Story 3: TA-3: Autheticate Feature
+    - user wants to authenticate their account signing up/loging in for security. 
+- User Story 4: TA-4: Profile Page
+    - have a personal profile to keep track of all my posts about events.
+    - view marketplace items up for sale sold.
+- User Story 5: TA-6: Delete Feature = 2 Story Points
+    - user wants to be able to delete their account from UTSCHub
+___
+## Story Points assignment for Sprint 1 User Stories: 
+
+| User Story | Points Assigned | Assignee |
+|---|---|---|
+| TA-1: Sign Up Feature | 2 | Backend: Andrew Qian, <br> Frontend: Shun Murai |
+| TA-2: Login Feature | 2 | Frontend: John Yuan, <br> Backend: Andrew Qian |
+| TA-3: Authenticate Feature | 2 | Backend: Andrew Qian, <br> Fullstack: Henry Zhuo |
+| TA-4: Create the Profile Page | 7 |  Frontend: Shence Yang, Nandhakishore Krishnamurthy Shanthi <br> Fullstack: Henry Zhuo <br> Backend: Muntaqa Mahmood |
+| TA-6: Delete User Account | 3 | Backend: Muntaqa Mahmood, <br> Frontend: Shence Yang |
+___
+
+
+# Team Capacity
+| Member | Estimated hours of work per day |
+|---|---|
+| Andrew Qian | 2 |
+| Henry Zhuo | 2 |
+| Shence Yang | 2 |
+| Shun Murai | 2 |
+| Muntaqa Mahmood | 3 |
+| Nandhakishore Krishnamurthy Shanthi | 3 |
+| John Yuan | 3 |
+
+# Participants
+Henry Zhuo, Shence Yang, Shun Murai, Muntaqa Mahmood, Andrew Qian, John Yuan, Nandhakishore Krishnamurthy Shanthi
+
+# Spikes
+___

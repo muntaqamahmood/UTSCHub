@@ -28,6 +28,6 @@ The release planning meeting was held in our standup channel in the CSCC01 Disco
 
 ## Participants:
 
-Henry Zhuo, Shence Yang, Shun Murai, Muntaqa Mahmood, Andrew Qian, John Yuan, Nandhakishore Krishnamurthy Shanthi, 
+Henry Zhuo, Shence Yang, Shun Murai, Muntaqa Mahmood, Andrew Qian, John Yuan, Nandhakishore Krishnamurthy Shanthi
 
 
