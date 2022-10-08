@@ -65,10 +65,10 @@ ___
 # Team Capacity
 | Member | Estimated hours of work per day |
 |---|---|
-| Andrew Qian | 2 |
-| Henry Zhuo | 2 |
-| Shence Yang | 2 |
-| Shun Murai | 2 |
+| Andrew Qian | 3 |
+| Henry Zhuo | 3 |
+| Shence Yang | 3 |
+| Shun Murai | 3 |
 | Muntaqa Mahmood | 3 |
 | Nandhakishore Krishnamurthy Shanthi | 3 |
 | John Yuan | 3 |
@@ -77,4 +77,7 @@ ___
 Henry Zhuo, Shence Yang, Shun Murai, Muntaqa Mahmood, Andrew Qian, John Yuan, Nandhakishore Krishnamurthy Shanthi
 
 # Spikes
-___
+
+- Frontend Routing was something our team did not have any prior experience to, so we had to quickly learn and apply. 
+- Our team had to learn some frameworks & tools that is incorporated into MERN Stack, our frontend team had to learn React and redux and backend team had to learn Nodejs and Expressjs framework and how models and routing and MongoDB.
+- Our team ran into some merge conflicts and we as a team had to cooperate with each other and work together to get around it.
