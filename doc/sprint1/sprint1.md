@@ -54,10 +54,10 @@ ___
 
 | User Story | Points Assigned | Assignee |
 |---|---|---|
-| TA-1: Sign Up Feature | 2 | Backend: Andrew Qian, <br> Frontend: Shun Murai |
+| TA-1: Sign Up Feature | 2 | Backend: Andrew Qian, <br> Frontend: Shun Murai, Henry Zhuo |
 | TA-2: Login Feature | 2 | Frontend: John Yuan, <br> Backend: Andrew Qian |
-| TA-3: Authenticate Feature | 2 | Backend: Andrew Qian, <br> Fullstack: Henry Zhuo |
-| TA-4: Create the Profile Page | 7 |  Frontend: Shence Yang, Nandhakishore Krishnamurthy Shanthi <br> Fullstack: Henry Zhuo <br> Backend: Muntaqa Mahmood |
+| TA-3: Authenticate Feature | 2 | Backend: Andrew Qian |
+| TA-4: Create the Profile Page | 7 |  Frontend: Shence Yang, Nandhakishore Krishnamurthy Shanthi, Henry Zhuo <br> Backend: Muntaqa Mahmood |
 | TA-6: Delete User Account | 3 | Backend: Muntaqa Mahmood, <br> Frontend: Shence Yang |
 ___
 
