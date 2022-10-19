@@ -44,7 +44,7 @@ Planning Meetings Total Mark: 5 / 5
     - 1 mark  = At least 2 group members or more have not sent their updates or is low-quality
     - 0 marks = At least 3 group members or more have not sent their updates or is low-quality
 
-Daily Stand-ups Total Mark: 7 / 10
+Daily Stand-ups Total Mark: 10 / 10
 
 ---
 ## User Stories (Tracked in /Github) (max 10 marks) 
@@ -217,13 +217,13 @@ System Design Total Mark: 10 / 10
   - 1 mark = documentation has been created for frontend and backend systems with some errors
   - 0 marks = documentation has not been created
 
-  Your Mark: __ / 14
+  Your Mark: 13 / 14
 
 ---
 
 
 ## Total Mark
 
-70 / 89
+86 / 89
 
  « Note: This mark will be updated after the demo is presented »
