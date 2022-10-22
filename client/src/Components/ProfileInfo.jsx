@@ -1,13 +1,34 @@
-import React from 'react'
-import coverIMG from '../assets/profileBackground.png'
-import profilepic from'../assets/profilepic1.png'
+import React, { useRef } from 'react'
+import { useNavigate } from "react-router-dom";
 import Button from '@mui/material/Button'
-import { getEmail, getUser } from '../Utils/Common'
+import {
+    getUser,
+    getEmail,
+    getCoverImg,
+    getProfilePic,
+} from '../Utils/Common'
+
+import defaultProfilePic from'../assets/profilepic1.png'
+import defaultCoverImg from '../assets/profileBackground.png'
 
 const ProfileInfo = () => {
     
     const user = getUser();
     const email = getEmail();
+    const profilePic = getProfilePic();
+    const coverImg = getCoverImg();
+
+    const profilePicFallback = useRef();
+    const coverImgFallback = useRef();
+
+    const navigate = useNavigate();
+
+    const handleEditProfile = () => {
+        navigate('/editProfile');
+    }
+
+    const onProfilePicError = () => profilePicFallback.current.src = defaultProfilePic;
+    const onCoverImgError = () => coverImgFallback.current.src = defaultCoverImg;
 
     return (
         <>
@@ -16,7 +37,7 @@ const ProfileInfo = () => {
             </div>
 
             <div>
-                <img src={coverIMG} width={927} height={90} alt="cover" />
+                <img ref={coverImgFallback} src={coverImg} width={927} height={90} alt="cover" onError={onCoverImgError} />
             </div>
 
             <div 
@@ -26,9 +47,8 @@ const ProfileInfo = () => {
                 }}
             >
           
-            <img src={profilepic} height={120} alt="profile-pic" />
-                <Button variant = "outlined" size="medium" color = "primary" >edit cover</Button>
-                <Button variant = "outlined" size="medium" color = "primary">edit profile</Button>
+            <img ref={profilePicFallback} src={profilePic} height={120} alt="profile-pic" onError={onProfilePicError} />
+                <Button variant = "outlined" size="medium" color = "primary" onClick={handleEditProfile}>edit profile</Button>
             </div>
         </>
     )

@@ -1,5 +1,98 @@
+
+.App {
+    background-image: url("../assets/utsc.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.formContainer {
+    margin: 150px auto auto auto;
+    z-index: 7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formContainer form, .formContainer .form {
+    z-index: 7;
+    background-color: white;
+    width: 70%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #dfdfdf;
+}
+.uiForm {
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 400px;
+}
+
+.formField {
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formField input {
+    z-index: 7;
+    border: 1p solid grey;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.formField label {
+    z-index: 7;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.formField input:focus {
+    outline: none;
+}
+
+.submitButton, .button {
+    z-index: 7;
+    background-color: #697BFF;
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.submitButton:hover {
+    background-color: #175892;
+}
+
 .errorMsg {
     color: red;
     margin: 0;
     align-self: flex-start;
+}
+
+.Logo {
+    z-index: 7;
+    width: 25%;
+    height: 25%;
+
+}
+
+.AboutUs {
+    margin: 150px auto auto auto;
+}
+
+.AboutUs .title {
+    font-size: 50px;
 }

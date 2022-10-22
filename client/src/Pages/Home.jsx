@@ -4,6 +4,7 @@ import ProfileInfo from '../Components/ProfileInfo'
 import { removeUserSession,getToken } from '../Utils/Common'
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Navbar from '../Components/Navbar/Navbar';
 
 const Home = () => {
 
@@ -31,7 +32,7 @@ const Home = () => {
 
 
     return (
-        <>
+        <><Navbar />
             <div style={{paddingLeft: "300px"}}>
                 <div>
                     <ProfileInfo/>

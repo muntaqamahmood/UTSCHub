@@ -38,6 +38,21 @@ After you successfully log in, you go to the profile page, and there’s a logou
 #### No headers, returns response if deletion is successful
 ![image](https://user-images.githubusercontent.com/69706702/194674125-d7c97d0d-bdd1-422f-b693-0dcbd3f336b4.png)
 
+## Events:
+After you successfully log in, you go to the profile page, from there you can go to your events that you have posted or you can go to the Events Page from Navbar on the side. In the Events Page, you can post an event, click on a currently posted Event to check the details of that event and join the event.
+
+### Events Routing:
+#### GET Request for events sent to http://localhost:8000/api/events
+![image](https://user-images.githubusercontent.com/69706702/197316032-e5e4b2a1-e455-46d7-a6a3-28535d365171.png)
+
+#### POST Request for events sent to http://localhost:8000/api/postevent/uploadEvent
+#### Auth Token is required as a header so that the request can stay Private to a user
+![image](https://user-images.githubusercontent.com/69706702/197316138-a53159de-8efa-4f2c-a1c8-14c2512acc0d.png)
+
+#### DELETE Request for events sent to http://localhost:8000/api/events/:id
+#### id of the Event is required to delete the right event
+![image](https://user-images.githubusercontent.com/69706702/197316080-b1a705ee-cbd5-43f5-8b9f-ac379f5de4e9.png)
+
 
 
 

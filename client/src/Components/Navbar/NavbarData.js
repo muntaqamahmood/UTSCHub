@@ -21,7 +21,7 @@ export const SidebarData = [
 	icon: <AiIcons.AiFillShopping />,
 },
 {
-	title: "Messgae",
+	title: "Message",
 	path: "/message",
 	icon: <TbIcons.TbMessageCircle />,
 },

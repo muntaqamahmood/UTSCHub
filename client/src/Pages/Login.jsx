@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { getToken, setUserData, setUserSession } from "../Utils/Common";
+import './signupLogin.css';
+import { Row, Col, Container } from 'react-bootstrap';
+import AboutUs from "../AboutUs";
 
 const Login = () => {
 
@@ -35,7 +38,7 @@ const Login = () => {
                 console.log(response);
                 setLoading(false);
 
-                setUserData(response.data.name, response.data.email);
+                setUserData(response.data.name, response.data.email, response.data.profilePic, response.data.coverImg);
 
                 navigate('/dashboard');
             }).catch(error => {
@@ -71,37 +74,54 @@ const Login = () => {
     }
 
     return (
-        <div style={{paddingLeft: "300px"}}>
-            Login <br /><br />
-            <div>
-                UofT Email<br />
-                <input
-                    type="text"
-                    value={username}
-                    onChange={e => setUsername(e.target.value)}
-                />
-            </div>
-            <div>
-                Password<br />
-                <input
-                    type="password"
-                    value={password}
-                    onChange={e => setPassword(e.target.value)}
-                />
-            </div><br />
-            {error && <pre className="error">{error}</pre>}
-            <input
-                type="button"
-                value={loading ? "Loading..." : "Log In"}
-                disabled={loading}
-                onClick={handleLogin}
-            />
-            <input
-                type="button"
-                value={loading ? "Loading..." : "Sign Up"}
-                disabled={loading}
-                onClick={handleSignup}
-            />
+        <div className="App">
+            <Container>
+                <Row>
+                    <Col>
+                        <div className="formContainer">
+                            <div className="form">
+                                <h1>Login</h1>
+                                <hr />
+                                <div className="uiForm">
+                                    <div className="formField">
+                                        <label>UofT Email</label>
+                                        <input
+                                            type="text"
+                                            value={username}
+                                            onChange={e => setUsername(e.target.value)}
+                                        />
+                                    </div>
+                                    <div className="formField">
+                                        <label>Password</label>
+                                        <input
+                                            type="password"
+                                            value={password}
+                                            onChange={e => setPassword(e.target.value)} />
+                                    </div>
+                                    <br />
+                                    {error && <pre className="error">{error}</pre>}
+                                    <input
+                                        className="button"
+                                        type="button"
+                                        value={loading ? "Loading..." : "Log In"}
+                                        disabled={loading}
+                                        onClick={handleLogin} />
+                                    <input
+                                        className="button"
+                                        type="button"
+                                        value={loading ? "Loading..." : "Sign Up"}
+                                        disabled={loading}
+                                        onClick={handleSignup}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col>
+                        <AboutUs />
+                    </Col>
+                </Row>
+            </Container>
         </div>
     )
 }
