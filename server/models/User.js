@@ -17,6 +17,10 @@ const UserSchema = mongoose.Schema({
     profilePictureURL: { 
         type: String,
         required: false,
+    },
+    coverImg: {
+        type: String,
+        required: false,
     }
 });
 
