@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { getToken, setUserData, setUserSession } from "../Utils/Common";
-import './signupLogin.css';
+import '../Styles/signupLogin.css';
 import { Row, Col, Container } from 'react-bootstrap';
-import AboutUs from "../AboutUs";
+import AboutUs from "./AboutUs";
 
 const Login = () => {
 
@@ -38,7 +38,7 @@ const Login = () => {
                 console.log(response);
                 setLoading(false);
 
-                setUserData(response.data.name, response.data.email, response.data.profilePictureURL, response.data.coverImg);
+                setUserData(response.data.name, response.data._id, response.data.email, response.data.profilePictureURL, response.data.coverImg);
 
                 navigate('/dashboard');
             }).catch(error => {

@@ -23,6 +23,17 @@ const EventSchema = mongoose.Schema({
         type: Array,
         default: []
     },
+
+    usersJoined: {
+        type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User'}],
+        default: [],
+    },
+
+    creator: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
     
 }, { timestamps: true })
 

@@ -45,7 +45,7 @@ After you successfully log in, you go to the profile page, from there you can go
 #### GET Request for events sent to http://localhost:8000/api/events
 ![image](https://user-images.githubusercontent.com/69706702/197316032-e5e4b2a1-e455-46d7-a6a3-28535d365171.png)
 
-#### POST Request for events sent to http://localhost:8000/api/postevent/uploadEvent
+#### POST Request for events sent to http://localhost:8000/api/events/uploadEvent
 #### Auth Token is required as a header so that the request can stay Private to a user
 ![image](https://user-images.githubusercontent.com/69706702/197316138-a53159de-8efa-4f2c-a1c8-14c2512acc0d.png)
 

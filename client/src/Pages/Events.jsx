@@ -6,7 +6,7 @@ import ImageSlider from '../Utils/ImageSlider';
 import Button from '@mui/material/Button'
 import { getToken } from '../Utils/Common';
 import { useNavigate } from "react-router-dom";
-import './event.css'
+import '../Styles/event.css'
 
 const Events = () => {
 
@@ -33,7 +33,7 @@ const Events = () => {
           'x-auth-token' : getToken()
       }
   }
-    axios.post('/api/postevent/getEvents',null,config).then (response =>{
+    axios.post('/api/events/getEvents',null,config).then (response =>{
       if (response.data.success) {
 
             setevents([...response.data.events])     //check if the name is called Events
@@ -57,11 +57,11 @@ const Events = () => {
       return;
     } 
 
-    setevents_final(Events_Final.filter(eventss => {
+    setevents_final(Events_Final.filter(events => {
       if (query === '') {
-        return eventss;
-      } else if (eventss.title.toLowerCase().includes(query.toLowerCase())) {
-        return eventss;
+        return events;
+      } else if (events.title.toLowerCase().includes(query.toLowerCase())) {
+        return events;
       } else {
         return null
       }
@@ -92,17 +92,20 @@ const Events = () => {
         </div> 
           :
                         // render card part
-        <div>
+        <div className="eventsContnet">
           <Row gutter={[16, 16]}></Row>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
           <div class="example">
             <input type="text" placeholder="Enter Event Name" onChange={event => setQuery(event.target.value)} />
             <button type="submit" onClick={filterPost}><i class="fa fa-search"></i></button>
           </div>
+    
+        
           {
             Events_Final.map((events,index) => {
               return (
                 <Col lg={6} md={8} xs={24}>
+                  <a href={`/events/${events._id}`}>
                   <Card
                     hoverable={true}
                     cover={
@@ -114,6 +117,7 @@ const Events = () => {
                         description={events.description}
                     />
                   </Card>
+                  </a>
                 </Col>
               )
             }) 

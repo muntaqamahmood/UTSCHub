@@ -1,10 +1,11 @@
 import React from 'react'
 import Button from '@mui/material/Button'
 import ProfileInfo from '../Components/ProfileInfo'
-import { removeUserSession,getToken } from '../Utils/Common'
+import { removeUserSession,getToken, getUser } from '../Utils/Common'
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Navbar from '../Components/Navbar/Navbar';
+import '../Styles/home.css';
 
 const Home = () => {
 
@@ -17,6 +18,7 @@ const Home = () => {
 
     let axiosConfig = {
         headers: {
+            'Content-Type': 'application/json;charset=UTF-8',
             'x-auth-token': getToken(),
         }
     };
@@ -30,34 +32,32 @@ const Home = () => {
         })
     }
 
+    const handleGetEvents = () => {
+        navigate("/events/array");
+    }
+
+    const handleGetItems = () => {
+        navigate("/postitems/array");
+    }
+
 
     return (
         <><Navbar />
-            <div style={{paddingLeft: "300px"}}>
+            <div className="profileBox">
                 <div>
                     <ProfileInfo/>
                 </div>
             </div>
-            <div
-                style={{
-                    paddingLeft: "300px",
-                    paddingTop:"20px",
-                }}
-            >
+            <div className="leftMainBox">
                 <span>
-                    <Button variant="contained" size="large" color="secondary">My events</Button>
+                    <Button variant="contained" size="large" color="secondary" onClick={handleGetEvents}>My events</Button>
                 </span>
                 
                 <span style={{paddingLeft:"20px"}}>
-                    <Button variant="contained" size="large" color="secondary">My items for sale</Button>
+                    <Button variant="contained" size="large" color="secondary" onClick={handleGetItems}>My items</Button>
                 </span>
             </div>
-            <div 
-                style={{
-                    paddingLeft: "800px",
-                    paddingTop:"250px"
-                }}
-            >
+            <div className="rightMainBox">
                 <span>
                     <Button variant="contained" size="large" color="secondary" onClick={handleLogout}> Log out</Button>
                 </span>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
-import './signupLogin.css';
-import AboutUs from "../AboutUs";
+import '../Styles/signupLogin.css';
+import AboutUs from "./AboutUs";
 import { useNavigate } from "react-router-dom";
 import { Row, Col, Container } from 'react-bootstrap';
 

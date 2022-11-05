@@ -1,0 +1,30 @@
+.profileBox {
+    padding-left: 300px;
+}
+
+.leftMainBox {
+    padding-left: 300px;
+    padding-top: 20px;
+}
+
+.rightMainBox {
+    padding-left: 800px;
+    padding-top: 250px;
+}
+
+/* The styling for ProfileInfo.jsx */
+.profileBody {
+    background-color: #d3d3d3;
+    height: 134px;
+}
+
+.cvrImage {
+    width: 927px;
+    height: 90px;
+}
+
+.profilePic {
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+}

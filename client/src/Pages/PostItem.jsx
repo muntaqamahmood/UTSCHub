@@ -3,7 +3,7 @@ import { Typography, Button, Form, Input } from 'antd';
 import FileUpload from '../Utils/FileUpload'
 import Axios from 'axios';
 import { getUser,getToken } from '../Utils/Common';
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Navbar from '../Components/Navbar/Navbar';
 
 const { Title } = Typography;
@@ -38,11 +38,12 @@ function PostItem(props) {
 
 
         if (!TitleValue || !DescriptionValue || !PriceValue ||
-            !Images) {
+            Images.length === 0) {
             return alert('fill all the fields first!')
         }
 
         const variables = {
+            writer : getUser(),
             title: TitleValue,
             description: DescriptionValue,
             price: PriceValue,
@@ -55,7 +56,7 @@ function PostItem(props) {
             }
         }
 
-        Axios.post('/api/product/uploadItem', variables, config)
+        Axios.post('/api/postitem/uploadItem', variables, config)
             .then(response => {
                 if (response.data.success) {
                     alert('Item Successfully Posted')
@@ -69,51 +70,53 @@ function PostItem(props) {
     }
 
     return (
-        <div style={{ maxWidth: '700px', margin: '2rem auto' }}>
-            <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                <Title level={2}> Post An Item</Title>
-            </div>
+        <><Navbar />
+            <div style={{ maxWidth: '700px', margin: '2rem auto' }}>
+                <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+                    <Title level={2}> Post An Item</Title>
+                </div>
 
 
-            <Form onSubmit>
+                <Form onSubmit = {onSubmit}>
 
-                {/* DropZone */}
-                <FileUpload refreshFunction={updateImages}/>
+                    {/* DropZone */}
+                    <FileUpload refreshFunction={updateImages}/>
 
-                <br />
-                <br />
-                <label>Item Title</label>
-                <Input
-                    onChange={onTitleChange}
-                    value={TitleValue}
-                />
-                <br />
-                <br />
-                <label>Item Description</label>
-                <TextArea
-                    onChange={onDescriptionChange}
-                    value={DescriptionValue}
-                />
-                <br />
-                <br />
-                <label>Price($)</label>
-                <Input
-                    onChange={onPriceChange}
-                    value={PriceValue}
-                    type="number"
-                />
-                <br />
-                <br />
+                    <br />
+                    <br />
+                    <label>Item Title</label>
+                    <Input
+                        onChange={onTitleChange}
+                        value={TitleValue}
+                    />
+                    <br />
+                    <br />
+                    <label>Item Description</label>
+                    <TextArea
+                        onChange={onDescriptionChange}
+                        value={DescriptionValue}
+                    />
+                    <br />
+                    <br />
+                    <label>Price($)</label>
+                    <Input
+                        onChange={onPriceChange}
+                        value={PriceValue}
+                        type="number"
+                    />
+                    <br />
+                    <br />
 
                 <Button
-                    onClick
+                    onClick={onSubmit}
                 >
                     Submit
                 </Button>
 
-            </Form>
+                </Form>
 
-        </div>
+            </div>
+        </>
     )
 }
 

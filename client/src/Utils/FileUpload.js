@@ -77,12 +77,7 @@ function FileUpload(props) {
                 ))}
 
 
-            </div>           
-
-            
-
-                
-
+            </div>          
 
         </div>
     )

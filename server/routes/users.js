@@ -9,6 +9,27 @@ const auth = require('../middleware/auth');
 
 
 //http://localhost:8000/api/users
+//???????? why cant u have a body for a get request (braindead design)
+// @route   PUT api/users/array
+// @desc    Get an array of users from an array of userIds
+// @access  Private
+router.get('/array', auth, async (req, res) => {
+    try {
+        const userIds = req.query.userIds;
+        if (!userIds) {
+            return res.status(400).json({ message: 'Please include a property of userIds in the params' });
+        }
+        const userObjects = await User.find({ '_id': { $in: userIds } });
+        // DO WE WANT TO SEND THIS ERROR? i think its fine if a user deletes there account and you cant find it anymore
+        // if(userIds.length != userObjects.length){
+        //     return res.status(404).json({ message: 'Cannot find one or more of the users' });
+        // }
+        res.status(200).json(userObjects);
+    } catch (err) {
+        console.log(err);  
+        res.status(500).send('Server Error');
+    }
+});
 
 /*
     ROUTE: POST api/users

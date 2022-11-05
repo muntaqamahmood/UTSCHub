@@ -1,13 +1,21 @@
 import defaultProfilePic from'../assets/profilepic1.png'
 import defaultCoverImg from '../assets/profileBackground.png'
+import { json } from 'react-router-dom';
 
 export const getUser =() => {
     const userStr = sessionStorage.getItem("name");
 
-    console.log("test");
     //console.log(JSON.parse(userStr));
     //JSON.parse(userStr);
     if (userStr) return JSON.parse(userStr);
+    else return null;
+}
+
+export const getUserId = () => {
+    const userId = sessionStorage.getItem("id");
+
+    console.log(JSON.parse(userId));
+    if (userId) return JSON.parse(userId);
     else return null;
 }
 
@@ -43,8 +51,9 @@ export const setUserSession = (token) => {
 }
 
 
-export const setUserData = (name, email, profilePic, coverImg) => {
+export const setUserData = (name, id, email, profilePic, coverImg) => {
     sessionStorage.setItem("name", JSON.stringify(name));
+    sessionStorage.setItem("id", JSON.stringify(id ?? null));
     sessionStorage.setItem("email", JSON.stringify(email));
     sessionStorage.setItem("coverImg", JSON.stringify(coverImg ?? null));
     sessionStorage.setItem("profilePic", JSON.stringify(profilePic ?? null));

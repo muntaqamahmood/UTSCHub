@@ -10,6 +10,7 @@ import {
 
 import defaultProfilePic from'../assets/profilepic1.png'
 import defaultCoverImg from '../assets/profileBackground.png'
+import '../Styles/home.css';
 
 const ProfileInfo = () => {
     
@@ -37,18 +38,12 @@ const ProfileInfo = () => {
             </div>
 
             <div>
-                <img ref={coverImgFallback} src={coverImg} width={927} height={90} alt="cover" onError={onCoverImgError} />
+                <img className="cvrImage" ref={coverImgFallback} src={coverImg} alt="cover" onError={onCoverImgError} />
             </div>
 
-            <div 
-                style={{
-                    backgroundColor: "#D3D3D3",
-                    height:"134px",
-                }}
-            >
-          
-            <img ref={profilePicFallback} src={profilePic} height={120} alt="profile-pic" onError={onProfilePicError} />
-                <Button variant = "outlined" size="medium" color = "primary" onClick={handleEditProfile}>edit profile</Button>
+            <div className="profileBody">
+                <img className="profilePic" ref={profilePicFallback} src={profilePic} alt="profile-pic" onError={onProfilePicError} />
+                    <Button variant = "outlined" size="medium" color = "primary" onClick={handleEditProfile}>edit profile</Button>
             </div>
         </>
     )

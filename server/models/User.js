@@ -21,7 +21,19 @@ const UserSchema = mongoose.Schema({
     coverImg: {
         type: String,
         required: false,
-    }
+    },
+    eventsJoined: {
+        type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Event'}],
+        default: [],
+    },
+    eventsPosted: {
+        type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Event'}],
+        default: [],
+    },
+    itemsBookmarked: {
+        type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'item'}],
+        default: [],
+    },
 });
 
 module.exports = mongoose.model('user', UserSchema);
