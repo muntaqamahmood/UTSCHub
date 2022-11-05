@@ -53,6 +53,15 @@ After you successfully log in, you go to the profile page, from there you can go
 #### id of the Event is required to delete the right event
 ![image](https://user-images.githubusercontent.com/69706702/197316080-b1a705ee-cbd5-43f5-8b9f-ac379f5de4e9.png)
 
+#### GET Request, get all items a user has bookmarked http://localhost:8000/api/postitems/array
+<img width="671" alt="image" src="https://user-images.githubusercontent.com/51491033/200084027-554bc857-de1f-4041-b9e3-1147b7f8146c.png">
+
+#### PUT Request, adding/removing a bookmark
+<img width="601" alt="image" src="https://user-images.githubusercontent.com/51491033/200084200-e9fc930c-8a9b-4ac5-8cb7-13fb7d943da8.png">
+
+#### PUT Request, adding event
+<img width="520" alt="image" src="https://user-images.githubusercontent.com/51491033/200084289-1f77a92b-58c9-43a6-a468-26924a39f1bd.png">
+
 
 
 
