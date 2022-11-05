@@ -1,12 +1,10 @@
 const express = require('express');
 const router = express.Router();
-
 const auth = require("../middleware/auth");
-
 const item = require('../models/item');
 const User = require('../models/User');
 const mongoose = require('mongoose');
-
+const { check, validationResult } = require('express-validator');
 const Item = require('../models/item');
 
 //http://localhost:8000/api/postitems
@@ -17,46 +15,47 @@ const Item = require('../models/item');
     DESC: POST items (UTSC marketplace)
     ACCESS: Private 
 */
-/*router.post("/uploadItem", auth, [
-    check('title', 'Title is required').not().isEmpty(),
-    check('description', 'Description is required').not().isEmpty(),
-    check('price', 'Price is required').not().isEmpty(),
-], async (req, res) => {
-    //check for errors in the request
-    const errors = validationResult(req);
-    // Finds the validation errors in this request and wraps them in an object with handy functions and returns a 400 status
-    if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
-    }
 
-    try {
+// router.post("/uploadItem", auth, [
+//     check('title', 'Title is required').not().isEmpty(),
+//     check('description', 'Description is required').not().isEmpty(),
+//     check('price', 'Price is required').not().isEmpty(),
+// ], async (req, res) => {
+//     //check for errors in the request
+//     const errors = validationResult(req);
+//     // Finds the validation errors in this request and wraps them in an object with handy functions and returns a 400 status
+//     if (!errors.isEmpty()) {
+//         return res.status(400).json({ errors: errors.array() });
+//     }
 
-        const user = await User.findById(req.user.id).select('-password');
-        const items = new item({
-            title: req.body.title,
-            description: req.body.description,
-            price: req.body.price,
-            date_added: req.body.date_added,
-            seller: user
-        });
+//     try {
+//         const user = await User.findById(req.user.id).select('-password');
+//         console.log("waefoijewaiohfaowiehf");
+//         console.log(req.body);
+//         const items = new item({
+//             title: req.body.title,
+//             description: req.body.description,
+//             price: req.body.price,
+//             date_added: req.body.date_added,
+//             seller: user
+//         });
 
-        items.save();
-        return res.status(200).json({ success: true })
+//         items.save();
+//         return res.status(200).json({ success: true })
         
-    } catch (error) {
-        return res.status(400).json({ success: false, err })
-    }
-});*/
+//     } catch (error) {
+//         return res.status(400).json({ success: false, err })
+//     }
+// });
+
 
 router.post("/uploadItem", auth, (req, res) => {
 
     const item = new Item(req.body)
-
     item.save((err) => {
         if (err) return res.status(400).json({ success: false, err })
         return res.status(200).json({ success: true })
     })
-
 });
 
 router.post("/getItems", auth, (req, res) => {
@@ -77,8 +76,6 @@ router.get("/items_by_id", auth, (req, res) => {
     if (type === "array") {
 
     }
-
-
     //we need to find the product information that belong to product Id 
     Item.find({ '_id': { $in: itemIds } })
         .populate('writer')
@@ -88,7 +85,8 @@ router.get("/items_by_id", auth, (req, res) => {
         })
 });
 
-/*// @route   GET api/postitems
+
+// @route   GET api/postitems
 // @desc    Get all Items
 // @access  Private
 router.get('/', auth, (req, res) => {
@@ -121,7 +119,7 @@ router.get('/array', auth, async (req, res) => {
         res.status(500).send('Server Error');
     }
 });
-*/
+
 // @route   PUT api/postitem/:id
 // @desc    bookmark an item
 // @access  Private
@@ -151,7 +149,7 @@ router.put('/:id', auth, async (req, res) => {
         res.status(500).send('Server Error');
     }
 });
-/** 
+
 
 
 //get all items for a specific user by their id
@@ -177,7 +175,7 @@ router.get('/:id', async (req, res) => {
         
         res.status(500).send('Server Error');
     }
-});*/
+});
 
 //edit an item by its id 
 // @route   PUT api/postitem/:id
