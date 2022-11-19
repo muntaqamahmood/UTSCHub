@@ -134,6 +134,9 @@ router.put('/follow/:id', auth, async(req, res) => {
             return res.status(404).json({ message: 'User not found' });
         }
         const creator = await User.findById(event.creator);
+        if (!Array.isArray(creator.followedUsers)) {
+            creator.followedUsers = [];
+        }
         const followedUsers = creator.followedUsers;
         followedUsers.push(currentUser);
         await creator.save();

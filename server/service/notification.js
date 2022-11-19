@@ -1,6 +1,10 @@
 const inAppNotification = require('../models/InAppNotification');
 
 module.exports = async function createOrAddActivity(user, message, endpoint) {
+    if (!Array.isArray(user.followedUsers)) {
+        user.followedUsers = [];
+    }
+    user.followedUsers = user.followedUsers ?? [];
     if (user.followedUsers.length > 0) {
         for (const eachUser of user.followedUsers) {
             const isExist = await inAppNotification.find({ 'user': { $in: eachUser } });
