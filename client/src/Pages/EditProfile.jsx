@@ -12,6 +12,7 @@ import {
   getUser,
   setUserData,
   validatePassword,
+  getUserId,
 } from '../Utils/Common';
 import FileUpload from '../Utils/FileUpload'
 import Navbar from '../Components/Navbar/Navbar';
@@ -77,7 +78,7 @@ const EditProfile = () => {
     axios.put('/api/users', body, axiosConfig).then(response => {
       if (response.status === 200) {
         // Succesfully changed account info on backend, update data on client
-        setUserData(username, getEmail(), profilePic, coverImg);
+        setUserData(username, getUserId(), getEmail(), profilePic, coverImg);
         navigate('/dashboard');
       } else {
         const errorMsg = 'Error while saving changes';

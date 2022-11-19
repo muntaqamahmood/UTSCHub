@@ -25,9 +25,13 @@ const ItemSchema = new Schema({
     },
     //uses the user model to reference the user
     seller: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'User'
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
     },
+    hidden: {
+        type: Boolean,
+        default: false,
+    }
 });
 
 module.exports = Item = mongoose.model('item',ItemSchema);

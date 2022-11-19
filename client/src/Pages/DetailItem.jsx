@@ -9,9 +9,7 @@ import Comments from "../Components/comments/Comments";
 import "./Commentview.css";
 import '../Styles/eventdetail.css'
 import { useNavigate } from "react-router-dom";
-import {
-    Button,
-} from 'antd';
+import { Button } from 'antd';
 
 function DetailItem() {
     
@@ -43,6 +41,20 @@ function DetailItem() {
         });
     }, []);
 
+    const deleteItem = (itemId) => {
+        const path = '/api/postitem/' + itemId;
+        Axios.delete(path, axiosConfig).then(response => {
+            const message = response.data.message
+            console.log(message);
+            navigate("/market");
+        }).catch((error) => {
+            const errorMsg = error.response.data.msg;
+            alert(errorMsg);
+            console.error(errorMsg);
+            console.log(error);
+        })
+    }
+
     return (
         <div className="postItem" style={{ width: '100%', padding: '3rem 4rem' }}>
 
@@ -60,10 +72,10 @@ function DetailItem() {
 
             <Row gutter={[16, 16]} >
                 <Col lg={12} xs={24}>
-                    <ItemImage detail={Item}/>
+                    <ItemImage detail={Item} deleteItem={deleteItem}/>
                 </Col>
                 <Col lg={12} xs={24}>
-                    <ItemInfo detail={Item}/>
+                    <ItemInfo detail={Item} deleteItem={deleteItem}/>
                 </Col>
             </Row>
             <Comments

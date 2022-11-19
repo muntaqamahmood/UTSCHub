@@ -62,6 +62,12 @@ After you successfully log in, you go to the profile page, from there you can go
 #### PUT Request, adding event
 <img width="520" alt="image" src="https://user-images.githubusercontent.com/51491033/200084289-1f77a92b-58c9-43a6-a468-26924a39f1bd.png">
 
+#### PUT Request, adding item to cart
+![image](https://user-images.githubusercontent.com/51491033/202826310-3424befb-fd6f-423a-82ca-adb67e853d8f.png)
+
+#### GET Request, get items a user has bookmarked or has in cart
+![image](https://user-images.githubusercontent.com/51491033/202826341-e0327c29-a16b-454f-ac9b-d400f69cd91e.png)
+
 
 
 

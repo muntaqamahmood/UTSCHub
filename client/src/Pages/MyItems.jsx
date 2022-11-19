@@ -18,7 +18,7 @@ const MyItems = () => {
     };
     
     useEffect(() => {
-        Axios.get('http://localhost:8000/api/postitem/array', axiosConfig)
+        Axios.get('http://localhost:8000/api/postitem/getUserItems', axiosConfig)
         .then(response =>{
             console.log(response.data.itemsBookmarked);
             setItemsBookmarked(response.data.itemsBookmarked);
@@ -48,12 +48,12 @@ const MyItems = () => {
                                 :
                                 itemsPosted.map((item, index) => {
                                     return (
-                                        <Col lg={6} md={8} xs={24}>
+                                        <Col lg={6} md={8} xs={24} key={`itemsPosted-${index}`}>
                                             <Card>
                                                 <Card.Title>
                                                     {item.title}
                                                 </Card.Title>
-                                                {/* <a href={`/itemsposted/${item._id}`}><ImageSlider images={item.images} /></a> */}
+                                                { <a href={`/market/${item._id}`}><ImageSlider images={item.images} /></a> }
                                                 <Card.Text>
                                                     {item.description}
                                                 </Card.Text>
@@ -72,12 +72,12 @@ const MyItems = () => {
                                 :
                                 itemsBookmarked.map((item, index) => {
                                     return (
-                                        <Col lg={6} md={8} xs={24}>
+                                        <Col lg={6} md={8} xs={24} key={`itemsBookmarked-${index}`}>
                                             <Card>
                                                 <Card.Title>
                                                     {item.title}
                                                 </Card.Title>
-                                                {/* <a href={`/itemsposted/${item._id}`}><ImageSlider images={item.images} /></a> */}
+                                                { <a href={`/market/${item._id}`}><ImageSlider images={item.images} /></a> }
                                                 <Card.Text>
                                                     {item.description}
                                                 </Card.Text>

@@ -21,7 +21,7 @@ const MyEvents = () => {
     };
     
     useEffect(() => {
-        Axios.get('http://localhost:8000/api/events/array', axiosConfig)
+        Axios.get('http://localhost:8000/api/events/getUserEvents', axiosConfig)
         .then(response =>{
             setEventsJoined(response.data.eventsJoined);
             setEventsPosted(response.data.eventPosted);

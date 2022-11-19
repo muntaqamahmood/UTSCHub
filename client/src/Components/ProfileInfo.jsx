@@ -11,6 +11,7 @@ import {
 import defaultProfilePic from'../assets/profilepic1.png'
 import defaultCoverImg from '../assets/profileBackground.png'
 import '../Styles/home.css';
+import { InAppNotificationDropdown } from '../Pages/InAppNotificationDropdown';
 
 const ProfileInfo = () => {
     
@@ -34,7 +35,7 @@ const ProfileInfo = () => {
     return (
         <>
             <div>
-                welcome back {user}<pre></pre> your email: {email}
+                Welcome Back! {user}<pre></pre> Your email: {email}
             </div>
 
             <div>
@@ -44,6 +45,8 @@ const ProfileInfo = () => {
             <div className="profileBody">
                 <img className="profilePic" ref={profilePicFallback} src={profilePic} alt="profile-pic" onError={onProfilePicError} />
                     <Button variant = "outlined" size="medium" color = "primary" onClick={handleEditProfile}>edit profile</Button>
+
+                {/* <InAppNotificationDropdown /> */}
             </div>
         </>
     )

@@ -93,14 +93,13 @@ const Events = () => {
           :
                         // render card part
         <div className="eventsContnet">
-          <Row gutter={[16, 16]}></Row>
+          
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-          <div class="example">
+          <div className="example">
             <input type="text" placeholder="Enter Event Name" onChange={event => setQuery(event.target.value)} />
-            <button type="submit" onClick={filterPost}><i class="fa fa-search"></i></button>
+            <button type="submit" onClick={filterPost}><i className="fa fa-search"></i></button>
           </div>
-    
-        
+          <Row gutter={[16, 16]}>
           {
             Events_Final.map((events,index) => {
               return (
@@ -122,6 +121,7 @@ const Events = () => {
               )
             }) 
           }
+          </Row>
         </div>
       }
 

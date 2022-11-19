@@ -3,8 +3,9 @@ import Axios from 'axios'
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import EventImage from '../Components/Image'
 import EventInfo from '../Components/EventInfo'
-import { useParams } from "react-router-dom"
+import { Navigate, useParams } from "react-router-dom"
 import { getToken, getUser } from '../Utils/Common'
+import { useNavigate } from "react-router-dom";
 import '../Styles/eventdetail.css'
 
 
@@ -19,6 +20,8 @@ function DetailEvent() {
         }
     };
 
+    const navigate = useNavigate();
+
     useEffect(() => {
         Axios.get(`/api/events/events_by_id?id=${eventId}&type=single`, axiosConfig)
         .then(response => {
@@ -30,14 +33,12 @@ function DetailEvent() {
                 },
                 params: {"userIds": response.data[0].usersJoined}
               };
-            Axios.get('http://localhost:8000/api/users/array', axiosConfig2).then(response => {
+            Axios.get('http://localhost:8000/api/users/getUsers', axiosConfig2).then(response => {
                 console.log(response.data);
                 setUsersJoined(response.data);
             });
         })
     }, []);
-
-    console.log('Who are the users\n', usersJoined);
 
     const joinEvent = (eventId) => {
         const path = '/api/events/' + eventId;
@@ -49,15 +50,32 @@ function DetailEvent() {
             const errorMsg = error.response.data.message;
             alert(errorMsg);
             console.error(errorMsg);
-            console.log(error);
         })
     }
 
     const deleteEvent = (eventId) => {
-        if (getUser() === Event.writer){
-            const path = '/api/events/' + eventId;
-            Axios.delete(path, axiosConfig).then(response => {
-                const message = response.data.message
+        const path = '/api/events/' + eventId;
+        Axios.delete(path, axiosConfig).then(response => {
+            const message = response.data.message
+            console.log(message);
+            navigate("/events");
+        }).catch((error) => {
+            const errorMsg = error.response.data.message;
+            alert(errorMsg);
+            console.error(errorMsg);
+            console.log(error);
+        })
+    }
+
+    const followUser = (eventId) => {
+        if(getUser() == Event.writer){
+            alert("This event is created by you.")
+        }
+        else {
+            const path = '/api/events/follow/' + eventId;
+            Axios.put(path, {}, axiosConfig).then(response => {
+                const message = response.data.message;
+                alert(message);
                 console.log(message);
             }).catch((error) => {
                 const errorMsg = error.response.data.message;
@@ -65,9 +83,6 @@ function DetailEvent() {
                 console.error(errorMsg);
                 console.log(error);
             })
-        }
-        else{
-            alert("You didn't create this post.")
         }
     }
       
@@ -85,7 +100,7 @@ function DetailEvent() {
                         <EventImage detail={Event}/>
                     </Col>
                     <Col >
-                        <EventInfo detail={Event} joinEvent = {joinEvent} deleteEvent = {deleteEvent}/>
+                        <EventInfo detail={Event} joinEvent = {joinEvent} deleteEvent = {deleteEvent} followUser = {followUser}/>
                     </Col>
                 </Row>
                 <h2 >See who has joined this event.</h2>

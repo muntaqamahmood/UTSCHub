@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Navbar from '../Components/Navbar/Navbar';
 import '../Styles/home.css';
+import { InAppNotificationDropdown } from './InAppNotificationDropdown';
 
 const Home = () => {
 
@@ -33,11 +34,15 @@ const Home = () => {
     }
 
     const handleGetEvents = () => {
-        navigate("/events/array");
+        navigate("/events/getUserEvents");
     }
 
     const handleGetItems = () => {
-        navigate("/postitems/array");
+        navigate("/postitems/getUserItems");
+    }
+
+    const handleGetOrders = () => {
+        navigate("/postitems/buyItems");
     }
 
 
@@ -50,11 +55,18 @@ const Home = () => {
             </div>
             <div className="leftMainBox">
                 <span>
-                    <Button variant="contained" size="large" color="secondary" onClick={handleGetEvents}>My events</Button>
+                    <Button variant="contained" size="large" color="secondary" onClick={handleGetEvents}>My Events</Button>
                 </span>
-                
-                <span style={{paddingLeft:"20px"}}>
-                    <Button variant="contained" size="large" color="secondary" onClick={handleGetItems}>My items</Button>
+                <span>
+                    <span style={{paddingRight: "220px"}}/>
+                    <Button variant="contained" size="large" color="secondary" onClick={handleGetOrders}>My Orders</Button>
+                </span>
+
+                <span style={{paddingLeft:"220px"}}>
+                    <Button variant="contained" size="large" color="secondary" onClick={handleGetItems}>My Items</Button>
+                </span>
+                <span style={{paddingLeft: "40px"}}>
+                    <InAppNotificationDropdown />
                 </span>
             </div>
             <div className="rightMainBox">
@@ -62,7 +74,7 @@ const Home = () => {
                     <Button variant="contained" size="large" color="secondary" onClick={handleLogout}> Log out</Button>
                 </span>
                     
-                <span style={{paddingLeft:"20px"}}>
+                <span style={{paddingLeft:"40px"}}>
                     <Button variant="contained" size="large" color="secondary" onClick={handleDeleteAccount}> Delete Account</Button>
                 </span>
             </div>

@@ -31,6 +31,7 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/upload', require('./routes/upload'));
 app.use('/api/events', require('./routes/events'));
 app.use('/api/comments', require('./routes/comments'));
+app.use('/api/notification', require('./routes/notification'));
 
 app.use("/uploads", express.static("uploads"));
 

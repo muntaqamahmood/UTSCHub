@@ -97,16 +97,17 @@ const Market = () => {
           :
                         // render card part
         <div>
-          <Row gutter={[16, 16]}></Row>
+        
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-          <div class="example">
+          <div className="example">
             <input type="text" placeholder="Enter Item Name" onChange={item => setQuery(item.target.value)} />
-            <button type="submit" onClick={filterPost}><i class="fa fa-search"></i></button>
+            <button type="submit" onClick={filterPost}><i className="fa fa-search"></i></button>
           </div>
+          <Row gutter={[16, 16]}>
           {
             Items_Final.map((items,index) => {
               return (
-                <Col lg={6} md={8} xs={24}>
+                <Col lg={6} md={8} xs={24} key={`itemsFinal-${index}`}>
                   <Card
                     hoverable={true}
                     cover={
@@ -123,6 +124,7 @@ const Market = () => {
               )
             }) 
           }
+          </Row>
         </div>
       }
 
